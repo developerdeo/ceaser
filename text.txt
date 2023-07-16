@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html lang="eng">
-<head>
-<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>
+ <script>
     function printer(){
     var key=document.getElementById('key').value;
     var pl=document.getElementById('pl').value;
@@ -12,30 +7,11 @@
     var count = 0;
     var alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var vlen=up.charAt(count);
-    var end=document.getElementById('ed').value;
-
-    var final = "Result = ";
+    
+    var final = "Result= ";
     
     var val1 =0;
     var val2 =0;
-   let radbtns= document.querySelectorAll("input[name='ed']");
-   let result = document.getElementById("result2");
-
-   let findselector =() => {
-    let selected = document.querySelector("input[name='ed']:checked").value;
-    selected=end;
-
-   }
-   radbtns.forEach(radbtn => {
-radbtn.addEventListener("change",findselector);
-   });
-findselector();
-
-           
-           document.getElementById('result2').innerHTML=end;
-        
-    if(end === "Encrypt"){
-    
     while (count<=len){
      
    switch(up.charAt(count))
@@ -430,9 +406,7 @@ findselector();
       document.getElementById('result1').innerHTML= final;
     }
     break;
-case " ":
-final = final + " ";
-document.getElementById('result1').innerHTML= final;
+
    }
    count++; 
   }
@@ -465,42 +439,8 @@ document.getElementById('result1').innerHTML= final;
     document.getElementById('result1').innerHTML="Failed to execute";
    }
     }*/
-  
-  
+    
   }
-  else if(end === "Decrypt"){
-    document.getElementById('result1').innerHTML="Decrypt message";
-  }
-  else{
-    document.getElementById('result1').innerHTML="Failed to execute";
-   }
-    }
+
     </script>
   
- <title>Ceaser Cypher</title>
-</head>
-<body style="text-align: center; border: 2px solid black; padding-left: 0px; padding-right: 0px; margin:50px;">
-<div>
-  <h1 >Ceaser Cypher</h1>
-<label style="font-size: 20px;">Enter a value</label>
-<input type="text" onkeyup="printer()" id="pl" placeholder="Enter plain text" style="font-size: 20px;">
-<br>
-<br>
-<label style="font-size: 20px;">Enter key</label>
-<input type="text" onkeyup="printer()" id="key"  placeholder="Enter key" style="font-size: 20px;"><br>
-<br>
-<input type="radio" checked onkeyup="printer()" id="ed" name="ed"  value="Encrypt" style="font-size: 20px;">
-<label style="font-size: 20px;">Encrypt</label>
-<input type="radio" onkeyup="printer()" id="ed" name="ed"  value="Decrypt" style="font-size: 20px;">
-<label style="font-size: 20px;">Decrypt</label>
-
-<br>
-<h1 style="color: black; font-size: 20px;" id="result1"></h1>
-<br>
-<h1 style="color: black; font-size: 20px;" id="result2"></h1>
-
-</div>
-
-
-
-</body>
