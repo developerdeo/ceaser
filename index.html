@@ -3,44 +3,909 @@
 <head>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     function printer(){
     var key=document.getElementById('key').value;
     var pl=document.getElementById('pl').value;
     var len=pl.length-1;
+    var up=pl.toUpperCase();
     var count = 0;
-    var vlen=pl.charAt(count);
-    var final = "Result= "
-    if (vlen== "a"){
-      val1=0;
-      val2 = parseInt(key);
-      val3=vla1+val2;
-      if (val3 <= 25){
-        if (val3 == 0){
-          Result = Result + "A";
-          document.getElementById('result1').innerHTML= Result ;
-        }
-      }
+    var alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var vlen=up.charAt(count);
+    var end=document.getElementById('ed').value;
+    //end="Decrypt";
+    var final = "Result = ";
+    
+    var val1 =0;
+    var val2 =0;
+   let radbtns= document.querySelectorAll("input[name='ed']");
+   let result = document.getElementById("result2");
 
+   let findselector =() => {
+    let selected = document.querySelector("input[name='ed']:checked").value;
+    selected=end;
+
+   }
+   radbtns.forEach(radbtn => {
+radbtn.addEventListener("change",findselector);
+   });
+findselector();
+
+           
+           document.getElementById('result2').innerHTML=end;
+        
+    if(end === "Encrypt"){
+    
+    while (count<=len){
+     
+   switch(up.charAt(count))
+   {
+    case "A":
+    val1 = 0 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
     }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "B":
+    val1 = 1 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "C":
+    val1 = 2 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "D":
+    val1 = 3 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "E":
+    val1 = 4 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "F":
+    val1 = 5 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "G":
+    val1 = 6 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "H":
+    val1 = 7 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "I":
+    val1 = 8 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "J":
+    val1 = 9 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "K":
+    val1 = 10 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "L":
+    val1 = 11 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "M":
+    val1 = 12 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "N":
+    val1 = 13 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "O":
+    val1 = 14 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "P":
+    val1 = 15 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "Q":
+    val1 = 16 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "R":
+    val1 = 17 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "S":
+    val1 = 18 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "T":
+    val1 = 19 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "U":
+    val1 = 20 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "V":
+    val1 = 21 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "W":
+    val1 = 22 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "X":
+    val1 = 23 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "Y":
+    val1 = 24 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "Z":
+    val1 = 25 + parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+case " ":
+final = final + " ";
+document.getElementById('result1').innerHTML= final;
+   }
+   count++; 
+  }
+   //document.getElementById('result1').innerHTML=up;
+   /*if (up.charAt(count) == "A"){
+    val1 = 0 + parseInt(key);
+   }
+   else if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <=50){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+   else if (up.charAt(count) == "B"){
+    val1 = 1 +  alpha.charAt(val1);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 && val1 <= 50){
+      val2 = val1-25 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    }
+   else{
+    document.getElementById('result1').innerHTML="Failed to execute";
+   }
+    }*/
+  
+  
+  }
+  
+else if(end === "Decrypt"){
 
     
+    while (count<=len){
+     
+   switch(up.charAt(count))
+   {
+    case "A":
+    val1 = 26 - parseInt(key);
+    if(val1 < 26){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
     }
+    else if(val1 == 26){
+      val1=0;
+      final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "B":
+    val1 = 27 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "C":
+    val1 = 28 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "D":
+    val1 = 29 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "E":
+    val1 = 30 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "F":
+    val1 = 31 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "G":
+    val1 = 32 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "H":
+    val1 = 33 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "I":
+    val1 = 34 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "J":
+    val1 = 35 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "K":
+    val1 = 36 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "L":
+    val1 = 37 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "M":
+    val1 = 38 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "N":
+    val1 = 39 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "O":
+    val1 = 40 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "P":
+    val1 = 41 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "Q":
+    val1 = 42 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "R":
+    val1 = 43 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "S":
+    val1 = 44 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "T":
+    val1 = 45 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "U":
+    val1 = 46 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "V":
+    val1 = 47 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "W":
+    val1 = 48 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "X":
+    val1 = 49 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "Y":
+    val1 = 50 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+    case "Z":
+    val1 = 51 - parseInt(key);
+    if(val1 <= 25){
+    final = final + alpha.charAt(val1);
+    document.getElementById('result1').innerHTML= final;
+    }
+    else if (val1 > 25 ){
+      var val2 = val1-26 ;
+      final = final + alpha.charAt(val2); 
+      document.getElementById('result1').innerHTML= final;
+    }
+    else{
+      document.getElementById('result1').innerHTML= final;
+    }
+    break;
+case " ":
+final = final + " ";
+document.getElementById('result1').innerHTML= final;
+   }
+   count++; 
+  }}
+  else{
+    document.getElementById('result1').innerHTML="Failed to execute";
+   }
+    }
+  
     </script>
-  <title>Ceaser Cypher</title>
+  
+ <title>Caeser Cipher</title>
 </head>
-<body>
+<body style="text-align: center; border: 2px solid black; padding-left: 0px; padding-right: 0px; margin:50px;">
 <div>
-<label>Enter a value</label>
-<input type="text" onkeyup="printer()" id="pl" placeholder="Enter plain text">
-<label></label>
-<input type="text" onkeyup="printer()" id="key" placeholder="Enter key"><br>
-
-<h1 id="result"></h1>
+  <h1 >Ceaser Cypher</h1>
+<label style="font-size: 20px;">Enter a value</label>
+<input type="text" onkeyup="printer()" id="pl" placeholder="Enter plain text" style="font-size: 20px;">
 <br>
-<h1 id="result1"></h1>
+<br>
+<label style="font-size: 20px;">Enter key</label>
+<input type="text" onkeyup="printer()" id="key"  placeholder="Enter key" style="font-size: 20px;"><br>
+<br>
+<input type="radio" checked onkeyup="printer()" id="ed" name="ed"  value="Encrypt" style="font-size: 20px;">
+<label style="font-size: 20px;">Encrypt</label>
+<input type="radio" onkeyup="printer()" id="ed" name="ed"  value="Decrypt" style="font-size: 20px;">
+<label style="font-size: 20px;">Decrypt</label>
+
+<br>
+<h1 style="color: black; font-size: 20px;" id="result1"></h1>
+<br>
+<h1 style="color: black; font-size: 20px;" id="result2"></h1>
+
 </div>
 
 
