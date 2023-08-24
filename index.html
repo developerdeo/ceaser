@@ -13,15 +13,24 @@
     var alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var vlen=up.charAt(count);
     var end=document.getElementById('ed').value;
-    //end="Decrypt";
+    end=end.toUpperCase();
     var final = "Result = ";
     
     var val1 =0;
     var val2 =0;
-           
-           document.getElementById('result2').innerHTML=end;
-        
-    if(end === "Encrypt"){
+         if(end == 'E') {
+           document.getElementById('result2').innerHTML="Encryption";
+         }
+         else if(end == 'D'){
+           document.getElementById('result2').innerHTML="Decryption";
+         }
+          else if(end == ''){
+           document.getElementById('result2').innerHTML="";
+         }
+         else{
+          document.getElementById('result2').innerHTML="Enter e or d ";
+         }
+    if(end === "E"){
     
     while (count<=len){
      
@@ -456,7 +465,7 @@ document.getElementById('result1').innerHTML= final;
   
   }
   
-else if(end === "Decrypt"){
+else if(end === "D"){
 
     
     while (count<=len){
@@ -883,10 +892,10 @@ document.getElementById('result1').innerHTML= final;
 <label style="font-size: 20px;">Enter key</label>
 <input type="text" onkeyup="printer()" id="key"  placeholder="Enter key" style="font-size: 20px;"><br>
 <br>
-<input type="radio" checked onkeyup="printer()" id="ed" name="ed"  value="Encrypt" style="font-size: 20px;">
-<label style="font-size: 20px;">Encrypt</label>
-<input type="radio" onkeyup="printer()" id="ed" name="ed"  value="Decrypt" style="font-size: 20px;">
-<label style="font-size: 20px;">Decrypt</label>
+
+<label style="font-size: 20px;">Type 'e' for Encryption and 'd' for Decrypt</label><br>
+<input type="text" onkeyup="printer()" id="ed" name="ed" style="font-size: 20px;">
+
 
 <br>
 <h1 style="color: black; font-size: 20px;" id="result1"></h1>
