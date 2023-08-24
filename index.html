@@ -18,19 +18,6 @@
     
     var val1 =0;
     var val2 =0;
-   let radbtns= document.querySelectorAll("input[name='ed']");
-   let result = document.getElementById("result2");
-
-   let findselector =() => {
-    let selected = document.querySelector("input[name='ed']:checked").value;
-    selected=end;
-
-   }
-   radbtns.forEach(radbtn => {
-radbtn.addEventListener("change",findselector);
-   });
-findselector();
-
            
            document.getElementById('result2').innerHTML=end;
         
